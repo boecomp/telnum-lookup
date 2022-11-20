@@ -10,9 +10,7 @@
    /** Sets up telnum vars and included files. */
    require_once('settings.php');
 
-   //$key = '2063c8bca19e2bc3eb40eff02e72cf1e';
-
-   $lookup = ltrim('+'.$_GET['suche']);                                          
+   $lookup = str_replace("+41",0,$_GET['suche']);                                        
    $uri = 'https://tel.search.ch/api/?was='.$lookup.'&key='.$key;
    $data = file_get_contents($uri);            
    $xml = new SimpleXmlElement($data);          
