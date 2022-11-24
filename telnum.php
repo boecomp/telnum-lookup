@@ -10,11 +10,13 @@
    /** Sets up telnum vars and included files. */
    require_once('settings.php');
 
-   $lookup = str_replace("+41",0,$_GET['suche']);                                        
+   $lookup = $_GET['suche'];                                        
    $uri = 'https://tel.search.ch/api/?was='.$lookup.'&key='.$key;
    $data = file_get_contents($uri);            
    $xml = new SimpleXmlElement($data);          
-   $i = 0;                                                                                                                                 
+   $i = 0;
+
+   /** Iterate through data*/                                                              
    foreach ($xml->entry as $entry)
       {
       $namespaces = $entry->getNameSpaces(true);
@@ -29,7 +31,8 @@
          $city = $telnum->city ;                            
          $phone = $telnum->phone;                           
          if($i++ == 0)
-         /** Sets up telnup output format. */
+            
+         /** Sets up telnum output format. */
 
          {                                 
             echo $name.' '.$firstname;                       
