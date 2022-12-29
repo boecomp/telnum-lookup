@@ -16,3 +16,21 @@ https://tel.search.ch/api/getkey
 
 Help:
 https://tel.search.ch/api/help
+
+
+How to:
+
+Go to Wildix Terminal
+
+cd /var/www
+
+wget https://github.com/boecomp/telnum-lookup/archive/refs/heads/tel-search.zip
+
+unzip tel.search.ch.zip
+
+chown -R wms:wms telnum-lookup-tel-search
+
+cd telnum-lookup-tel-search
+
+nano-tiny settings.php (hier den Key anpassen)
+ctrl-x und Y (yes) enter
