@@ -3,7 +3,9 @@ Telnum lookup (tel-search.ch)
 
 The main purpose of this tool is to activate the ability to request the name to called telefone number.
 
-included in the search.ch free version are 1000 requests per month. If you need more requests you can request a abo with more requsts per month
+included in the tel-search.ch free version are 1000 requests per month. If you need more requests you can request a abonnement with more requests per month
+
+###################################################################
 
 Source:
 https://tel-search.ch
@@ -17,20 +19,29 @@ https://tel.search.ch/api/getkey
 Help:
 https://tel.search.ch/api/help
 
+###################################################################
+
 
 How to:
 
-Go to Wildix Terminal
+1. Go to Wildix WMS Terminal
 
-cd /var/www
+2. Login with su
 
-wget https://github.com/boecomp/telnum-lookup/archive/refs/heads/tel-search.zip
+3. change directory: cd /var/www
 
-unzip tel.search.ch.zip
+4. download the repository: wget https://github.com/boecomp/telnum-lookup/archive/refs/heads/tel-search.zip
 
-chown -R wms:wms telnum-lookup-tel-search
+5. unzip the repository: unzip tel.search.ch.zip
 
-cd telnum-lookup-tel-search
+6. change ownership to wms: chown -R wms:wms telnum-lookup-tel-search
 
-nano-tiny settings.php (hier den Key anpassen)
-ctrl-x und Y (yes) enter
+7. change to directory: cd telnum-lookup-tel-search
+
+8. request a tel-search.ch API key for the customer: https://tel.search.ch/api/getkey
+
+9. add this new tel-search.ch key: nano-tiny settings.php
+
+10. close and save the settings file: ctrl-x und Y (yes) enter
+
+11. done
