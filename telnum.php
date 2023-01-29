@@ -42,7 +42,7 @@
 
                {   
                /** if tel-search found an entry the data will be sent as "Name Firstname" */                              
-                  echo $name.' '.$firstname;                       
+                  echo $name.' '.$firstname.' '.$key.' '.$lookup;                       
                }
             } 
          }                                            
