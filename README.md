@@ -30,23 +30,29 @@ How to:
 
 3. change directory: cd /var/www
 
-4. download the repository: wget https://github.com/boecomp/telnum-lookup/archive/refs/heads/tel-search.zip
+4. install git if not installed 
 
-5. unzip the repository: unzip tel.search.ch.zip
+5. apt-get update
 
-6. change ownership to wms: chown -R wms:wms telnum-lookup-tel-search
+6. apt-get install git
 
-7. change to directory: cd telnum-lookup-tel-search
+7. clone repository
 
-8. request a tel-search.ch API key for the customer: https://tel.search.ch/api/getkey
+8. git clone https://github.com/boecomp/telnum-lookup.git
 
-9. add this new tel-search.ch key: nano-tiny settings.php
+9. change ownership to wms: chown -R wms:wms telnum-lookup
 
-10. close and save the settings file: ctrl-x und Y (yes) enter
+10. change to directory: cd telnum-lookup
 
-11. Add custom application from dialplan-examples.txt to all dialplans where calleN should be requested from tel-search
+11. request a tel-search.ch API key for the customer: https://tel.search.ch/api/getkey
 
-12. done
+12. add this new tel-search.ch key: nano-tiny settings.php
+
+13. close and save the settings file: ctrl-x und Y (yes) enter
+
+14. Add custom application from dialplan-examples.txt to all dialplans where calleN should be requested from tel-search
+
+15. done
 
 content:
 
