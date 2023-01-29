@@ -4,10 +4,9 @@
  *
  * The telnum.php is used to lookup phone numbers via the tel-search.ch API
  *
+ *
+ * Sets up telnum vars and included files.
  */
-
-   /** Sets up telnum vars and included files. */
-   //require_once('settings.php'); 
 
    $lookup = $_GET['suche'];   
    $key = $_GET['key'];                                     
@@ -16,11 +15,11 @@
    $xml = new SimpleXmlElement($data);          
    $i = 0;
 
-   echo $uri;
+   //echo $uri;
 
    if (str_contains($lookup, 'anonymous')) {
       /** if anonymous is sent, an empty echo will be sent */ 
-      echo 'leer'; 
+      echo ''; 
    } else 
          {
 
@@ -44,7 +43,7 @@
 
                {   
                /** if tel-search found an entry the data will be sent as "Name Firstname" */                              
-                  echo $name.' '.$firstname.' - test -';                       
+                  echo $name.' '.$firstname;                       
                }
             } 
          }                                            
