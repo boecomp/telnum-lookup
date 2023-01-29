@@ -16,11 +16,11 @@
    $xml = new SimpleXmlElement($data);          
    $i = 0;
 
-   //echo $key.' '.$lookup
+   echo $uri;
 
    if ($lookup = '+anonymous') {
       /** if anonymous is sent, an empty echo will be sent */ 
-      echo ''; 
+      echo 'leer'; 
    } else 
          {
 
