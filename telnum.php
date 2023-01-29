@@ -16,6 +16,8 @@
    $xml = new SimpleXmlElement($data);          
    $i = 0;
 
+   //echo $key.' '.$lookup
+
    if ($lookup = '+anonymous') {
       /** if anonymous is sent, an empty echo will be sent */ 
       echo ''; 
@@ -42,7 +44,7 @@
 
                {   
                /** if tel-search found an entry the data will be sent as "Name Firstname" */                              
-                  echo $name.' '.$firstname.' '.$key.' '.$lookup;                       
+                  echo $name.' '.$firstname.' - test -';                       
                }
             } 
          }                                            
