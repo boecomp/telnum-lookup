@@ -44,4 +44,16 @@ How to:
 
 10. close and save the settings file: ctrl-x und Y (yes) enter
 
-11. done
+11. Add custom application from dialplan-examples.txt to all dialplans where calleN should be requested from tel-search
+
+12. done
+
+content:
+
+1. .gitignore
+2. dialplan-example.txt --> example how to use in dialplan
+3. LICENSE --> (OpenSource)
+2. README.md
+2. settings.php --> API Key
+2. telnum.php --> get callerN via telsearch 
+3. dialplan-example.txt --> example how to use in dialplan

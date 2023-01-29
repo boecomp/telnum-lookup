@@ -1,0 +1,32 @@
+[
+  {
+    "number": "default",
+    "apps": [
+      {
+        "name": "CustomApp",
+        "params": {
+          "cwApp": "NoOp(Tel-Search request is: %2b${CALLERID(num):1})"
+        }
+      },
+      {
+        "name": "CustomApp",
+        "params": {
+          "cwApp": "Set(callerN=${CURL(https://PBXNAME.wildixin.com/telnum-lookup-tel.search.ch/telnum.php?suche=%2b${CALLERID(num):1})})"
+        }
+      },
+      {
+        "name": "CustomApp",
+        "params": {
+          "cwApp": "NoOp(Tel-Search result is: ${callerN})"
+        }
+      },
+      {
+        "name": "Set",
+        "params": {
+          "key": "cidname",
+          "value": "${callerN}"
+        }
+      }
+    ]
+  }
+]
