@@ -7,9 +7,10 @@
  */
 
    /** Sets up telnum vars and included files. */
-   require_once('settings.php');
+   //require_once('settings.php');
 
-   $lookup = $_GET['suche'];                                        
+   $lookup = $_GET['suche'];   
+   $key = $_GET['key'];                                     
    $uri = 'https://tel.search.ch/api/?was='.$lookup.'&key='.$key;
    $data = file_get_contents($uri);            
    $xml = new SimpleXmlElement($data);          
