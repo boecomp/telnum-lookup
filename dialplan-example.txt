@@ -9,9 +9,16 @@
         }
       },
       {
+        "name": "Set",
+        "params": {
+          "key": "telsearchkey",
+          "value": "38153b036e214d2e02a3d712dc9ab410"
+        }
+      },
+      {
         "name": "CustomApp",
         "params": {
-          "cwApp": "Set(callerN=${CURL(https://PBXNAME.wildixin.com/telnum-lookup-tel.search.ch/telnum.php?suche=%2b${CALLERID(num):1})})"
+          "cwApp": "Set(callerN=${CURL(https://CHANGETOPBXNAME.wildixin.com/telnum-lookup/telnum.php?key=${telsearchkey}&suche=%2b${CALLERID(num):1})})"
         }
       },
       {
