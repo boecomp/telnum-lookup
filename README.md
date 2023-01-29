@@ -30,7 +30,7 @@ How to:
 
 3. change directory: cd /var/www
 
-4. install git if not installed 
+4. install git if not installed /
 
 5. apt-get update
 
