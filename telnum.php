@@ -18,7 +18,7 @@
 
    echo $uri;
 
-   if ($lookup = '+anonymous') {
+   if (str_contains($lookup, 'anonymous')) {
       /** if anonymous is sent, an empty echo will be sent */ 
       echo 'leer'; 
    } else 
